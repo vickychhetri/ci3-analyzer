@@ -1,3 +1,7 @@
+/*
+Copyright © 2025 Vicky Chhetri <vickychhetri4@gmail.com>
+*/
+
 package analyzer
 
 import (
