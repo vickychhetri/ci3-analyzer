@@ -58,7 +58,7 @@ func BuildReport(module string, modulePath string) (*ModuleReport, error) {
 			FileFolder = parts[len(parts)-2]
 		}
 
-		warnings := detectRawSQL(parsed.Code, file)
+		warnings := AnalyzeSecurity(parsed.Code, file)
 
 		report.Files = append(report.Files, FileReport{
 			File:        filepath.Base(file),
