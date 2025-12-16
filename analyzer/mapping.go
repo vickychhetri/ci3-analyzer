@@ -97,6 +97,11 @@ func ExtractTables(code string) []string {
 		}
 	}
 
+	sqlMatchesFrom := sqlTableRegex.FindAllStringSubmatch(code, -1)
+	for _, sm := range sqlMatchesFrom {
+		// sm[2] = table name
+		tables = append(tables, sm[2])
+	}
 	return unique(tables)
 }
 
